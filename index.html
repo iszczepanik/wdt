@@ -7,10 +7,17 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Work Day Traffic</title>
 
+    <!-- AngularJs -->
+    <script src="js/jquery/jquery-1.11.3.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/main.js"></script>
+
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 
+    <link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,34 +27,186 @@
     <![endif]-->
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" ng-app="ngAppWdt" ng-strict-di>
         <div class="inner">
-            <div class="resolution-badge">
+            <div class="hidden resolution-badge">
                 <span class="badge visible-xs-block">xs</span>
                 <span class="badge visible-sm-block">sm</span>
                 <span class="badge visible-md-block">md</span>
                 <span class="badge visible-lg-block">lg</span>
             </div>
             <h1>
-                Work Day Traffic
+                Own Traffic
             </h1>
 
+            <div class="hidden" ng-controller="MainController">
+                I can add: {{a}} + {{b}} =  {{ a+b }}
+
+                <p>
+                    This renders because the controller does not fail to
+                    instantiate, by using explicit annotation style (see
+                    script.js for details)
+                </p>
+            </div>
+
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <h3>Praca - dom</h3>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                    <div class="map-name">
+                        <i class="fa fa-home fa-2x"></i>  <i class="fa fa-long-arrow-right"></i>  <i class="fa fa-briefcase fa-2x"></i>
+                        <div>home - office</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper panel panel-1">
+                                <div class="h_iframe">
+                                    <img class="ratio" src="img/ratio.png" />
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <i class="fa fa-car fa-fw"></i>
+                                                <span class="label label-success">17 min</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-line-chart fa-fw"></i>
+                                                <a href="#"> see route time weekly statistics</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-bar-chart fa-fw"></i> avarage route times:
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        <i class="fa fa-clock-o fa-fw"></i>
+                                                        <span class="label label-info">23 min</span> Mon-Fri 7:20-8:00
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-clock-o fa-fw"></i>
+                                                        <span class="label label-info">16 min</span> Mon-Fri 10:00-11:00
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-map-o fa-fw"></i>
+                                                <a href="#"> see in google maps</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper panel panel-2">
+                                <div class="h_iframe">
+                                    <img class="ratio" src="img/ratio.png" />
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <i class="fa fa-edit fa-fw"></i>
+                                                <a href="#"> edit this route info</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-mobile fa-fw"></i>
+                                                <a href="#"> configure notifications</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-road fa-fw"></i>
+                                                <a href="#"> add alternative routes</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-share-alt fa-fw"></i>
+                                                <a href="#"> share this route</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="wrapper">
                         <div class="h_iframe">
                             <img class="ratio" src="img/ratio.png" />
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d27761.90247444882!2d18.957261582251533!3d50.27019554762158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!4m5!1s0x4716cdbeb10b63b5%3A0xa8555e12916a8cce!2splac+Osiedlowy+2%2C+41-506+Chorz%C3%B3w!3m2!1d50.267368!2d18.939532!5e0!3m2!1sen!2spl!4v1448663319969" width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d49463.09241614406!2d18.95424801250209!3d50.273076235018486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448721997719" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <h3>Dom - praca</h3>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                    <div class="map-name">
+                        <i class="fa fa-briefcase fa-2x"></i>  <i class="fa fa-long-arrow-right"></i>  <i class="fa fa-home fa-2x"></i>
+                        <div>office - home</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper panel panel-1">
+                                <div class="h_iframe">
+                                    <img class="ratio" src="img/ratio.png" />
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <i class="fa fa-car fa-fw"></i>
+                                                <span class="label label-danger">45 min</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-line-chart fa-fw"></i>
+                                                <a href="#"> see route time weekly statistics</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-bar-chart fa-fw"></i> avarage route times:
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        <i class="fa fa-clock-o fa-fw"></i>
+                                                        <span class="label label-info">25 min</span> Mon-Fri 15:30-16:30
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-clock-o fa-fw"></i>
+                                                        <span class="label label-info">16 min</span> Mon-Fri 17:00-18:00
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-map-o fa-fw"></i>
+                                                <a href="#"> see in google maps</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper panel panel-2">
+                                <div class="h_iframe">
+                                    <img class="ratio" src="img/ratio.png" />
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <i class="fa fa-edit fa-fw"></i>
+                                                <a href="#"> edit this route info</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-mobile fa-fw"></i>
+                                                <a href="#"> configure notifications</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-road fa-fw"></i>
+                                                <a href="#"> add alternative routes</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-share-alt fa-fw"></i>
+                                                <a href="#"> share this route</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="wrapper">
                         <div class="h_iframe">
                             <img class="ratio" src="img/ratio.png" />
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d40805.6964504254!2d18.959437808978997!3d50.266610604394046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbeb10b63b5%3A0xa8555e12916a8cce!2splac+Osiedlowy+2%2C+41-506+Chorz%C3%B3w!3m2!1d50.267368!2d18.939532!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448663383833" width="500" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d40808.42828520673!2d18.962338508944928!3d50.26342220795835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!5e0!3m2!1sen!2spl!4v1448722072439" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
