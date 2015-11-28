@@ -29,14 +29,17 @@
 <body>
     <div class="container-fluid" ng-app="ngAppWdt" ng-strict-di>
         <div class="inner">
-            <div class="hidden resolution-badge">
-                <span class="badge visible-xs-block">xs</span>
-                <span class="badge visible-sm-block">sm</span>
-                <span class="badge visible-md-block">md</span>
-                <span class="badge visible-lg-block">lg</span>
+            <div class="right resolution-badge">
+                <span class="label label-warning visible-xs">xs</span>
+                <span class="label label-warning visible-sm">small</span>
+                <span class="label label-warning visible-md">medium</span>
+                <span class="label label-warning visible-lg">large</span>
             </div>
             <h1>
                 Own Traffic
+                <small>
+                    Never be surprised by the unusual traffic load on your way to work. Configure your daily routes and be warned ahead.
+                </small>
             </h1>
 
             <div class="hidden" ng-controller="MainController">
@@ -212,7 +215,91 @@
                 </div>
             </div>
 
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
+                    <div class="map-name">
+                        <i class="fa fa-home fa-2x"></i>  <i class="fa fa-long-arrow-right"></i>  <i class="fa fa-shopping-bag fa-2x"></i>
+                        <div>home - scc</div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper panel panel-1">
+                                <div class="h_iframe">
+                                    <img class="ratio" src="img/ratio.png" />
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <i class="fa fa-car fa-fw"></i>
+                                                <span class="label label-success">15 min</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-line-chart fa-fw"></i>
+                                                <a href="#"> see route time weekly statistics</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-bar-chart fa-fw"></i> avarage route times:
+                                                <ul class="list-unstyled">
+                                                    <li>
+                                                        <i class="fa fa-clock-o fa-fw"></i>
+                                                        <span class="label label-info">23 min</span> Mon-Fri 7:20-8:00
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-clock-o fa-fw"></i>
+                                                        <span class="label label-info">16 min</span> Mon-Fri 10:00-11:00
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-map-o fa-fw"></i>
+                                                <a href="#"> see in google maps</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div class="wrapper panel panel-2">
+                                <div class="h_iframe">
+                                    <img class="ratio" src="img/ratio.png" />
+                                    <div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <i class="fa fa-edit fa-fw"></i>
+                                                <a href="#"> edit this route info</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-mobile fa-fw"></i>
+                                                <a href="#"> configure notifications</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-road fa-fw"></i>
+                                                <a href="#"> add alternative routes</a>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-share-alt fa-fw"></i>
+                                                <a href="#"> share this route</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrapper">
+                        <div class="h_iframe">
+                            <img class="ratio" src="img/ratio.png" />
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d40799.17201720367!2d18.940098159060376!3d50.27422484588168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716ce1749f22e8f%3A0x29ceecc54566154a!2sSilesia+City+Center%2C+Chorzowska%2C+Katowice!3m2!1d50.270748399999995!2d19.005010199999997!5e0!3m2!1sen!2spl!4v1448732395793" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            
 
 
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
