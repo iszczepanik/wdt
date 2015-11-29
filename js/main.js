@@ -18,12 +18,12 @@ angular.module('ngAppWdt', [])
             alternatives: [
                 {
                     mapUrl: $sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d49463.09241614406!2d18.95424801250209!3d50.273076235018486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448721997719"),
-                    mapName: "via A4 and Boheñskiego",
+                    mapName: "via A4 and Bohenskiego",
                     currentTime: 20,
                 },
                 {
                     mapUrl: $sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d49463.09241614406!2d18.95424801250209!3d50.273076235018486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448721997719"),
-                    mapName: "via Chorzów Stary",
+                    mapName: "via Chorzow Stary",
                     currentTime: 24,
                 },
             ],
@@ -42,12 +42,12 @@ angular.module('ngAppWdt', [])
             alternatives: [
                 {
                     mapUrl: $sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d49463.09241614406!2d18.95424801250209!3d50.273076235018486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448721997719"),
-                    mapName: "via A4 and Boheñskiego",
+                    mapName: "via A4 and Bohenskiego",
                     currentTime: 20,
                 },
                 {
                     mapUrl: $sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d49463.09241614406!2d18.95424801250209!3d50.273076235018486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448721997719"),
-                    mapName: "via Chorzów Stary",
+                    mapName: "via Chorzow Stary",
                     currentTime: 24,
                 },
             ],
@@ -66,7 +66,7 @@ angular.module('ngAppWdt', [])
             alternatives: [
                 {
                     mapUrl: $sce.trustAsResourceUrl("https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d49463.09241614406!2d18.95424801250209!3d50.273076235018486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x4716cdbecc77fc2b%3A0x6868f8c25c79186c!2zT2Jyb8WEY8OzdyBDaG9yem93YSAxMSwgQ2hvcnrDs3c!3m2!1d50.266996899999995!2d18.940616!4m5!1s0x4716d1d9539eb51d%3A0x31dee8fd56174beb!2sKonduktorska+35%2C+Katowice!3m2!1d50.2833794!2d19.0295973!5e0!3m2!1sen!2spl!4v1448721997719"),
-                    mapName: "via A4 and Boheñskiego",
+                    mapName: "via A4 and Bohenskiego",
                     currentTime: 20,
                 },
             ],

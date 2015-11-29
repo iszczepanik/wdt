@@ -58,50 +58,56 @@
                                 <i class="fa fa-{{map.mapIconTo}} fa-2x"></i>
                                 <div>{{ map.mapName }}</div>
                             </div>
-                            <div>
-                                <ul class="list-unstyled">
-                                    <li>
-                                        <i class="fa fa-car fa-fw"></i>
-                                        <span class="label label-success">{{ map.currentTime }} min</span>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-line-chart fa-fw"></i>
-                                        <a href="#"> see route time weekly statistics</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-bar-chart fa-fw"></i> avarage route times:
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <i class="fa fa-clock-o fa-fw"></i>
-                                                <span class="label label-info">23 min</span> Mon-Fri 7:20-8:00
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-clock-o fa-fw"></i>
-                                                <span class="label label-info">16 min</span> Mon-Fri 10:00-11:00
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-map-o fa-fw"></i>
-                                        <a href="#"> see in google maps</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-edit fa-fw"></i>
-                                        <a href="#"> edit this route info</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-mobile fa-fw"></i>
-                                        <a href="#"> configure notifications</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-road fa-fw"></i>
-                                        <a href="#"> add alternative routes</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa fa-share-alt fa-fw"></i>
-                                        <a href="#"> share this route</a>
-                                    </li>
-                                </ul>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="fa fa-car fa-fw"></i>
+                                            <span class="label label-success">{{ map.currentTime }} min</span>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-line-chart fa-fw"></i>
+                                            <a href="#"> see route time weekly statistics</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-bar-chart fa-fw"></i> avarage route times:
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <i class="fa fa-clock-o fa-fw"></i>
+                                                    <span class="label label-info">23 min</span> Mon-Fri 7:20-8:00
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-clock-o fa-fw"></i>
+                                                    <span class="label label-info">16 min</span> Mon-Fri 10:00-11:00
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-map-o fa-fw"></i>
+                                            <a href="#"> see in google maps</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-6 col-sm-12 col-md-12 col-lg-12">
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <i class="fa fa-edit fa-fw"></i>
+                                            <a href="#"> edit this route info</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-mobile fa-fw"></i>
+                                            <a href="#"> configure notifications</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-road fa-fw"></i>
+                                            <a href="#"> add alternative routes</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-share-alt fa-fw"></i>
+                                            <a href="#"> share this route</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -124,12 +130,19 @@
                                 <i class="fa fa-code-fork fa-2x"></i>
                                 <div>alternative routes</div>
                             </div>
-                            <div ng-repeat="(key, altMap) in map.alternatives">
-                                <div class="wrapper alternative">
-                                    <div class="h_iframe">
-                                        <img class="ratio" src="img/ratio.png" />
-                                        <iframe ng-src="{{altMap.mapUrl}}" width="600" height="600" frameborder="0" style="border:0" allowfullscreen>
-                                        </iframe>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-12 col-md-12 col-lg-12" ng-repeat="(key, altMap) in map.alternatives">
+                                        <div class="hidden-lg altmap">
+                                            <i class="fa fa-map-o fa-2x"></i><br />
+                                            <i class="fa fa-car"></i>
+                                            <span class="label label-success">{{ altMap.currentTime }} min</span><br />
+                                            {{altMap.mapName}}
+                                        </div>
+                                    <div class="visible-lg wrapper alternative">
+                                        <div class="h_iframe">
+                                            <img class="ratio" src="img/ratio.png" />
+                                            <iframe ng-src="{{altMap.mapUrl}}" width="600" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
